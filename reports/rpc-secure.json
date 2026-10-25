@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-10-25T14:38:57.577Z",
+  "endpoint": "http://127.0.0.1:59737",
+  "origin": "http://localhost:3000",
+  "verdict": "CONFORME",
+  "findings": [
+    {
+      "method": "web3_clientVersion",
+      "risk": "informativo",
+      "httpStatus": 200,
+      "state": "EXPUESTO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": "CustodiaAndina-MockChain/v1.0.0"
+      }
+    },
+    {
+      "method": "eth_blockNumber",
+      "risk": "bajo",
+      "httpStatus": 200,
+      "state": "EXPUESTO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": "0x10d4f"
+      }
+    },
+    {
+      "method": "admin_peers",
+      "risk": "alto",
+      "httpStatus": 403,
+      "state": "BLOQUEADO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "error": {
+          "code": -32601,
+          "message": "Método no autorizado"
+        }
+      }
+    },
+    {
+      "method": "personal_unlockAccount",
+      "risk": "crítico",
+      "httpStatus": 403,
+      "state": "BLOQUEADO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "error": {
+          "code": -32601,
+          "message": "Método no autorizado"
+        }
+      }
+    }
+  ]
+}

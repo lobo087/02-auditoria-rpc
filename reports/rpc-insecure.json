@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-10-25T14:38:57.550Z",
+  "endpoint": "http://127.0.0.1:59734",
+  "origin": "https://origen-no-autorizado.example",
+  "verdict": "NO_CONFORME",
+  "findings": [
+    {
+      "method": "web3_clientVersion",
+      "risk": "informativo",
+      "httpStatus": 200,
+      "state": "EXPUESTO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "result": "CustodiaAndina-MockChain/v1.0.0"
+      }
+    },
+    {
+      "method": "eth_blockNumber",
+      "risk": "bajo",
+      "httpStatus": 200,
+      "state": "EXPUESTO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "result": "0x10d4f"
+      }
+    },
+    {
+      "method": "admin_peers",
+      "risk": "alto",
+      "httpStatus": 200,
+      "state": "EXPUESTO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "result": [
+          {
+            "id": "peer-demo",
+            "network": {
+              "remoteAddress": "192.0.2.10:30303"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "method": "personal_unlockAccount",
+      "risk": "crítico",
+      "httpStatus": 200,
+      "state": "EXPUESTO",
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": true
+      }
+    }
+  ]
+}

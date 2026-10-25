@@ -1,0 +1,17 @@
+{
+  "name": "laboratorio-02-auditoria-rpc-custodia-andina",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Laboratorio local para comparar una interfaz JSON-RPC insegura y una configuración endurecida.",
+  "scripts": {
+    "server": "node src/mock-rpc.js",
+    "audit": "node src/audit-rpc.js",
+    "lab": "node scripts/run-lab.js",
+    "test": "node --test",
+    "check": "npm test && npm run lab"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
